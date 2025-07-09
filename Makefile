@@ -1,10 +1,10 @@
-include config.mk
+PREFIX ?= /usr/local
 
 TARG=habit
 
 install:
 	mkdir -p $(DESTDIR)/$(PREFIX)/bin
-	cp -f bfi $(DESTDIR)$(PREFIX)/bin/$(TARG)
+	cp -f $(TARG) $(DESTDIR)$(PREFIX)/bin/$(TARG)
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/$(TARG)
 
 uninstall:
