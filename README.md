@@ -1,6 +1,8 @@
 # habit: Break bad habits in the terminal
 
-This is a script to help you break bad habits when using the terminal.
+This is a script to help you break bad habits when using the terminal. Upon
+running a command with `habit`, you will be prompted to see if you have addressed
+all possible concerns/prerequisites before the command is executed.
 
 ## Installing
 
