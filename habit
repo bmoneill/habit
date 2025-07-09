@@ -1,0 +1,23 @@
+#!/bin/sh
+
+cmd="$@"
+settings_file="$HOME/.config/habits.csv"
+
+if [ -z "$cmd" ]; then
+    echo "Usage: $0 <habit_command>"
+    exit 1
+fi
+
+if [ $(sed -n "/^$1/p" $settings_file | wc -l) -eq 0 ]; then
+    echo "$0: '$cmd' not found."
+else
+    msg="$(sed -n "/^$1/p" $settings_file | cut -d ',' -f 2- | tr ',' '\n' | sed 's/^/ - /')"
+    echo "$0:"
+    echo "$msg"
+    read -p "Did you address these concerns? (y/n): " response
+    if [ "$response" != "y" ]; then
+        exit 1
+    fi
+fi
+
+eval $cmd
