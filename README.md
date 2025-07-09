@@ -30,8 +30,11 @@ alias git="habit git"
 alias rm="habit rm"
 ```
 
+Habit will now prompt you every time you run the command:
+
 ```bash
 $ git commit
+habit:
  - Make sure you are on the right branch
  - Make sure your commit message is descriptive
  - Make sure the project builds
