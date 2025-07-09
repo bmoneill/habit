@@ -4,7 +4,7 @@ cmd="$@"
 settings_file="$HOME/.config/habits.csv"
 
 if [ -z "$cmd" ]; then
-    echo "Usage: $0 <habit_command>"
+    echo "Usage: $0 [<command> ...]"
     exit 1
 fi
 
